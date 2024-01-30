@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Elemento per il colore ai bordi -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#3A833C" /> <!-- Colore ai bordi (verde) -->
+            <corners android:radius="60dp"/>
+        </shape>
+    </item>
+    <!-- Elemento per la parte centrale con gradiente -->
+    <item android:left="8dp" android:right="8dp" android:top="24dp" android:bottom="8dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#FFFFFF"
+                android:centerColor="#FFFFFF"
+                android:endColor="#FFFFFF"
+                android:angle="270"/>
+            <corners android:radius="60dp"/>
+        </shape>
+    </item>
+</layer-list>

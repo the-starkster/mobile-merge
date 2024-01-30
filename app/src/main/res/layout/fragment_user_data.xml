@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sfondo_login">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".FragmentUserData">
+
+        <RelativeLayout
+            android:layout_width="370dp"
+            android:layout_height="714dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/roundlayoutrl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="25dp"
+                android:padding="16dp">
+
+                <!-- Riga per Nome -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/label_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/name_user_data"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/tf_name"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="2"
+                        android:enabled="false"
+                        android:minHeight="30dp"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,TextFields,VisualLintTextFieldSize" />
+
+                </LinearLayout>
+
+                <!-- Spaziatura -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <!-- Riga per Cognome -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/label_surname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/last_name_user_data"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/tl_name"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="2"
+                        android:enabled="false"
+                        android:minHeight="30dp"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:ignore="Autofill,LabelFor,TextFields,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+                </LinearLayout>
+
+                <!-- Spaziatura -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <!-- Riga per Codice Fiscale -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/label_cf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/tax_id_code_user_data"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/tCF"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="2"
+                        android:enabled="false"
+                        android:minHeight="48dp"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:ignore="Autofill,LabelFor,TextFields,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+                </LinearLayout>
+
+                <!-- Spaziatura -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <!-- Riga per Luogo di Nascita -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/label_birth_place"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/birth_place_user_data"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/tb_place"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="2"
+                        android:enabled="false"
+                        android:minHeight="30dp"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:ignore="Autofill,LabelFor,TextFields,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+                </LinearLayout>
+
+                <!-- Spaziatura -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <!-- Riga per Data di Nascita -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/label_birth_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/date_of_birth_user_data"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/td_birth"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="2"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:inputType="date"
+                        android:minHeight="30dp"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:ignore="Autofill,LabelFor,TextFields,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+                </LinearLayout>
+
+                <!-- Spaziatura -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <!-- Riga per Nazionalità -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/label_nationality"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/nationality_user_data"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/t_nationality"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="2"
+                        android:enabled="false"
+                        android:minHeight="30dp"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:ignore="Autofill,LabelFor,TextFields,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+                </LinearLayout>
+
+                <!-- Spaziatura -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <!-- Riga per Residenza -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/label_residence"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/place_of_residence_user_data"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/tp_residence"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="2"
+                        android:enabled="false"
+                        android:minHeight="30dp"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,TextFields,VisualLintTextFieldSize" />
+
+                </LinearLayout>
+
+                <!-- Spaziatura -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <!-- Riga per Indirizzo -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/label_address"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/address_user_data"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/t_address"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="2"
+                        android:enabled="false"
+                        android:minHeight="30dp"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:ignore="Autofill,LabelFor,TextFields,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+                </LinearLayout>
+
+                <!-- Spaziatura -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <!-- Riga per Numero di Telefono -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/label_phone_number"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/phone_number_user_data"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/tp_number"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="2"
+                        android:enabled="false"
+                        android:inputType="numberDecimal"
+                        android:minHeight="30dp"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+                </LinearLayout>
+
+                <!-- Spaziatura -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <!-- Riga per Email -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/label_email"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/email_usser_data"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/t_email"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="2"
+                        android:enabled="false"
+                        android:minHeight="30dp"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:ignore="Autofill,LabelFor,TextFields,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+                </LinearLayout>
+
+                <!-- Spaziatura -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="108dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <!-- Primo FrameLayout per i primi due bottoni -->
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <!-- Bottone per l'edit -->
+
+                        <!-- Bottone ritornare indietro dall'edit -->
+                        <Button
+                            android:id="@+id/btn_edit_data"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginStart="10dp"
+                            android:backgroundTint="#3A833C"
+                            android:text="@string/edit_user_data"
+                            android:textColor="#FFFFFF" />
+
+                        <Button
+                            android:id="@+id/btn_back_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#3A833C"
+                            android:text="@string/back_user_data"
+                            android:textColor="#FFFFFF"
+                            android:visibility="gone" />
+                    </FrameLayout>
+
+                    <!-- Secondo FrameLayout per gli altri due bottoni -->
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <!-- Bottone per il logout -->
+                        <Button
+                            android:id="@+id/btn_logout"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="#3A833C"
+                            android:text="@string/logout_user_data"
+                            android:textColor="#FFFFFF" />
+
+                        <!-- Bottone per applicare le modifiche -->
+                        <Button
+                            android:id="@+id/btn_apply_edit_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#3A833C"
+                            android:text="@string/apply_user_data"
+                            android:textColor="#FFFFFF"
+                            android:visibility="gone" />
+                    </FrameLayout>
+
+                    <!-- Terzo FrameLayout per l'ultimo bottone -->
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <!-- Bottone per condividere i dati personali -->
+                        <Button
+                            android:id="@+id/btn_share"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="10dp"
+                            android:backgroundTint="#3A833C"
+                            android:text="@string/share"
+                            android:textColor="#FFFFFF" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

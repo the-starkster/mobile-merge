@@ -1,0 +1,1056 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sfondo_login">
+
+    <RelativeLayout
+        android:layout_width="370dp"
+        android:layout_height="914dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/roundlayoutrl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".FragmentHealthProfile"
+        tools:ignore="VisualLintBounds">
+
+        <ScrollView
+            android:layout_width="375dp"
+            android:layout_height="674dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="39dp"
+            android:layout_marginEnd="9dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UselessParent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Sezione 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/_1_medical_measurement"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <!-- EditText disposti verticalmente -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Esempio di EditText affiancati -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/heartbeat"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/heartbeat_rate"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/t_heart"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/heart_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/date_heart"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/t_heart_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/data_measure_heart"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
+
+                            <Button
+                                android:id="@+id/btn_measure_heart"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="#3A833C"
+                                android:text="@string/measure_heart"
+                                android:textColor="#FFFFFF"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/imageViewSensorLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/descrizione_immagine"
+                                android:src="@drawable/indicazione_sensore_png"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <!-- Esempio di EditText affiancati -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/pressure"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/pressure"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/t_pressure"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/pressure_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/date_pressure"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/t_pressure_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/data_measure_pressure"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
+
+                            <Button
+                                android:id="@+id/btn_measure_pressure"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="#3A833C"
+                                android:text="@string/measure_pressure"
+                                android:textColor="#FFFFFF"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <!-- Esempio di EditText affiancati -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/diabetes"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/diabetes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/t_diabetes"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/diabetes_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/date_diabetes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/t_diabetes_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/data_measure_diabetes"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
+
+                            <Button
+                                android:id="@+id/btn_measure_diabetes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="#3A833C"
+                                android:text="@string/measure_diabetes"
+                                android:textColor="#FFFFFF"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <!-- Esempio di EditText affiancati -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/respiratory"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/respiratory_rate"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/t_respiratory_rate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/respratory_rate_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/date_respiratory"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/t_respiratory_rate_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/data_measure_respiratory_rate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/info_sensor"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/image_text"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
+
+                            <Button
+                                android:id="@+id/btn_measure_respiratory_rate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="#3A833C"
+                                android:text="@string/measure_respiratory_rate"
+                                android:textColor="#FFFFFF"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <!-- Esempio di EditText affiancati -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/oxygenation"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/oxygenation"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/t_oxygenation"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/oxygenation_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/date_oxygenation"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/t_oxygenation_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/data_measure_oxygenation"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
+
+                            <Button
+                                android:id="@+id/btn_measure_oxygenation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="#3A833C"
+                                android:text="@string/measure_oxygenation"
+                                android:textColor="#FFFFFF"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <!-- Esempio di EditText affiancati -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/temperature"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/body_temperature"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/t_temperature"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/temperature_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/date_temperature"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/t_temperature_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/data_measure_temperature"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
+
+                            <Button
+                                android:id="@+id/btn_measure_temperature"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="#3A833C"
+                                android:text="@string/measure_temperature"
+                                android:textColor="#FFFFFF"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <!-- Bottoni disposti orizzontalmente -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_share_measurement"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#3A833C"
+                            android:text="@string/share_measurement"
+                            android:textColor="#FFFFFF"
+                            tools:ignore="DuplicateSpeakableTextCheck" />
+
+                        <Button
+                            android:id="@+id/btn_measure"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#3A833C"
+                            android:text="@string/measure_health"
+                            android:textColor="#FFFFFF" />
+
+                        <Button
+                            android:id="@+id/btn_back_measurement"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#3A833C"
+                            android:text="@string/back_measurement"
+                            android:textColor="#FFFFFF"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btn_back_measurement_heart"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#3A833C"
+                            android:text="@string/back_measurement_heart"
+                            android:textColor="#FFFFFF"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Sezione 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/_2_pathologies"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <!-- EditText disposti verticalmente -->
+                    <LinearLayout
+                        android:id="@+id/container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_share_pathologies"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#3A833C"
+                            android:text="@string/share_pathologies"
+                            android:textColor="#FFFFFF" />
+
+                        <Button
+                            android:id="@+id/btn_add_edit_text"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#3A833C"
+                            android:text="@string/add_section_2"
+                            android:textColor="#FFFFFF"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btn_edit_edit_text"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#3A833C"
+                            android:text="@string/edit_edit_text"
+                            android:textColor="#FFFFFF" />
+
+                        <Button
+                            android:id="@+id/btn_back_edit_text"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#3A833C"
+                            android:text="@string/back_section_2"
+                            android:textColor="#FFFFFF"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btn_save_edit_text"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#3A833C"
+                            android:text="@string/save_edit_text"
+                            android:textColor="#FFFFFF"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Sezione 3 -->
+                <LinearLayout
+                    android:id="@+id/container_section_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/_3_user_lifestyle_2"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/are_you_on_medicines_health"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/health_medicines"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="2"
+                            android:enabled="false"
+                            android:minHeight="30dp"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,TextFields,VisualLintTextFieldSize" />
+
+                    </LinearLayout>
+
+                    <!-- Spaziatura -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/do_you_do_drugs_health"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/health_drugs"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="2"
+                            android:enabled="false"
+                            android:minHeight="30dp"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,TextFields,VisualLintTextFieldSize" />
+
+                    </LinearLayout>
+
+                    <!-- Spaziatura -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/do_you_drink_enough_water_health"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/health_water"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="2"
+                            android:enabled="false"
+                            android:minHeight="30dp"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,TextFields,VisualLintTextFieldSize" />
+
+                    </LinearLayout>
+
+                    <!-- Spaziatura -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:ignore="TooManyViews">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/do_you_drink_health"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/health_drink"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="2"
+                            android:enabled="false"
+                            android:minHeight="30dp"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,TextFields,TooManyViews,VisualLintTextFieldSize" />
+
+                    </LinearLayout>
+
+                    <!-- Spaziatura -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/do_you_eat_enough_vegetables_and_fruit_health"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/health_vegetables_and_fruit"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="2"
+                            android:enabled="false"
+                            android:minHeight="30dp"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,TextFields,VisualLintTextFieldSize" />
+
+                    </LinearLayout>
+
+                    <!-- Spaziatura -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/do_you_exercise_health"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/health_exercise"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="2"
+                            android:enabled="false"
+                            android:minHeight="30dp"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,TextFields,VisualLintTextFieldSize" />
+
+                    </LinearLayout>
+
+                    <!-- Spaziatura -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/do_you_have_a_good_diet_health"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/health_diet"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="2"
+                            android:enabled="false"
+                            android:minHeight="30dp"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,TextFields,VisualLintTextFieldSize" />
+
+                    </LinearLayout>
+
+                    <!-- Spaziatura -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/do_you_have_any_allergies_health"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/health_allergies"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="2"
+                            android:enabled="false"
+                            android:minHeight="30dp"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,TextFields,VisualLintTextFieldSize" />
+
+                    </LinearLayout>
+
+                    <!-- Spaziatura -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/do_you_sleep_enough_health"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/health_sleep"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="2"
+                            android:enabled="false"
+                            android:minHeight="30dp"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,TextFields,VisualLintTextFieldSize" />
+
+                    </LinearLayout>
+
+                    <!-- Spaziatura -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/do_you_smoke_health"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/health_smoke"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="2"
+                            android:enabled="false"
+                            android:minHeight="30dp"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,TextFields,VisualLintTextFieldSize" />
+
+                    </LinearLayout>
+
+                    <!-- Spaziatura -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/has_anyone_in_your_family_had_any_diseases_health"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/health_family_diseases"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="2"
+                            android:enabled="false"
+                            android:minHeight="30dp"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,TextFields,VisualLintTextFieldSize" />
+
+                    </LinearLayout>
+
+                    <!-- Spaziatura -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/have_you_ever_been_operated_in_the_past_health"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/health_operated"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="2"
+                            android:enabled="false"
+                            android:minHeight="30dp"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,TextFields,VisualLintTextFieldSize" />
+
+                    </LinearLayout>
+
+                    <!-- Spaziatura -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/how_many_meals_do_you_eat_in_a_day_health"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/health_eat"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="2"
+                            android:enabled="false"
+                            android:minHeight="30dp"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,TextFields,VisualLintTextFieldSize" />
+
+                    </LinearLayout>
+
+                    <!-- Spaziatura -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/which_diet_are_you_on_health"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/health_diet_on"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="2"
+                            android:enabled="false"
+                            android:minHeight="30dp"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,TextFields,VisualLintTextFieldSize" />
+
+                    </LinearLayout>
+
+                    <!-- Spaziatura -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_edit_health"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="40dp"
+                        android:backgroundTint="#3A833C"
+                        android:text="@string/edit_user_data"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/btn_share_health"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="40dp"
+                        android:backgroundTint="#3A833C"
+                        android:text="@string/share_health"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/btn_back_health"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="40dp"
+                        android:backgroundTint="#3A833C"
+                        android:text="@string/back_health"
+                        android:textColor="#FFFFFF"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/btn_apply_health"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="40dp"
+                        android:backgroundTint="#3A833C"
+                        android:text="@string/apply_health"
+                        android:textColor="#FFFFFF"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+

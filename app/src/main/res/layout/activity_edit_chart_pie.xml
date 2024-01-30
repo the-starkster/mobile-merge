@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Layout principale per la schermata di modifica del grafico a torta -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sfondo_login"
+    tools:context=".EditChartPie">
+
+    <!-- Titolo della schermata -->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_eu"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <!-- RelativeLayout principale che contiene i vari elementi di input e pulsanti -->
+
+    <RelativeLayout
+        android:layout_width="370dp"
+        android:layout_height="714dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/roundlayoutrl"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VisualLintBounds">
+
+        <!-- Layout per l'inserimento dei dati del cibo -->
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/roundlayout"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <!-- Titolo sezione Cibo -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom|center"
+                android:text="@string/food"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <!-- Campo di input per il cibo -->
+
+            <EditText
+                android:id="@+id/edit_text_food"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="-214dp"
+                android:hint="@string/click_to_add_food"
+                android:inputType="numberDecimal"
+                android:textColor="#000000"
+                android:textColorHint="@color/black"
+                tools:ignore="Autofill,DuplicateSpeakableTextCheck" />
+
+            <!-- Etichetta unità di misura per il cibo -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="-115dp"
+                android:layout_marginBottom="-14dp"
+                android:text="@string/food_eu"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <!-- Layout per l'inserimento dei dati delle medicine -->
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="164dp"
+            android:background="@drawable/roundlayout1"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <!-- Titolo sezione Medicine -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom|center"
+                android:text="@string/medicines"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <!-- Campo di input per le medicine -->
+
+            <EditText
+                android:id="@+id/edit_text_medicines"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="-214dp"
+                android:hint="@string/click_to_add_medicines"
+                android:inputType="numberDecimal"
+                android:textColor="#000000"
+                android:textColorHint="@color/black"
+                tools:ignore="Autofill" />
+
+            <!-- Etichetta unità di misura per le medicine -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="-115dp"
+                android:layout_marginBottom="-14dp"
+                android:text="@string/medicines_eu"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <!-- Layout per l'inserimento di altre spese -->
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="350dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="304dp"
+            android:background="@drawable/roundlayout2"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <!-- Titolo sezione Altre Spese -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom|center"
+                android:text="@string/other"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <!-- Campo di input per altre spese -->
+
+            <EditText
+                android:id="@+id/edit_text_other"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="-214dp"
+                android:hint="@string/click_to_add_other"
+                android:inputType="numberDecimal"
+                android:textColor="#000000"
+                android:textColorHint="@color/black"
+                tools:ignore="Autofill" />
+
+            <!-- Etichetta unità di misura per altre spese -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="-115dp"
+                android:layout_marginBottom="-14dp"
+                android:text="@string/other_eu"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <!-- Pulsante per tornare indietro -->
+
+        <Button
+            android:id="@+id/btn_add_back"
+            android:layout_width="109dp"
+            android:layout_height="54dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="450dp"
+            android:backgroundTint="#3A833C"
+            android:text="@string/back"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Pulsante per aggiungere/modificare i dati -->
+
+        <Button
+            android:id="@+id/btn_add_add"
+            android:layout_width="109dp"
+            android:layout_height="54dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="450dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginBottom="140dp"
+            android:backgroundTint="#3A833C"
+            android:text="@string/add_edit_chart"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "880143346404",
+    "project_id": "asilapp-1ffe4",
+    "storage_bucket": "asilapp-1ffe4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880143346404:android:170cccd238ad20d99b1af1",
+        "android_client_info": {
+          "package_name": "com.example.asilapp10"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZkkeHOxlubSN7jXnyEDwO-zrXUHmNh6c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
