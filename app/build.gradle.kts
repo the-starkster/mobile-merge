@@ -1,6 +1,9 @@
 plugins {
-    id("com.android.application")
+    //per firebase
     id("com.google.gms.google-services")
+
+    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.googleAndroidLibrariesMapsplatformSecretsGradlePlugin)
 }
 
 android {
@@ -15,7 +18,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        multiDexEnabled = true
+        multiDexEnabled = false
     }
 
     buildTypes {
@@ -31,16 +34,38 @@ android {
 }
 
 dependencies {
+    implementation(libs.appcompat)
+    implementation(libs.material.v1100)
+    implementation(libs.constraintlayout)
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
+    implementation(libs.firebase.storage)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.ext.junit)
+    androidTestImplementation(libs.espresso.core)
+    implementation (libs.anychart)
+    implementation(libs.multidex)
 
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.10.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("com.google.firebase:firebase-auth:22.3.0")
-    implementation("com.google.firebase:firebase-firestore:24.10.0")
-    implementation("com.google.firebase:firebase-storage:20.3.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    implementation ("com.github.AnyChart:AnyChart-Android:1.1.5")
-    implementation("com.android.support:multidex:1.0.3")
+    //----------da gio e ale-----------
+    implementation(libs.activity)
+    implementation(libs.fragment)
+    implementation(libs.play.services.maps)
+    implementation(libs.legacy.support.v4)
+    implementation(libs.lifecycle.livedata.ktx)
+    implementation(libs.lifecycle.viewmodel.ktx)
+
+    implementation("com.squareup.okhttp3:okhttp:4.11.0")//per le chiamate http
+    implementation("com.google.code.gson:gson:2.10.1")//per elaborare JSON
+
+    //questi per Places API
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
+    implementation("com.google.android.libraries.places:places:3.3.0")
+
+    //per CurrentLocation
+    implementation("com.google.android.gms:play-services-location:21.1.0")
+
+
+    //Per il QRCode
+    implementation("com.google.zxing:core:3.5.2")
+    implementation("com.google.zxing:javase:3.5.2")
 }

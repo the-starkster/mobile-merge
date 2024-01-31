@@ -17,7 +17,6 @@
     <string name="nationality">Nazionalità</string>
     <string name="place_of_residence">Residenza</string>
     <string name="address">Via</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="total_charges">Spese</string>
     <string name="do_you_smoke">Fumi?</string>
@@ -191,6 +190,9 @@
     <string name="confirm_sharing">Conferma</string>
     <string name="share_personal_data">Vuoi condividere i tuoi dati personali?</string>
     <string name="share_peathologies">Vuoi condividere le tue patologie?</string>
+    <string name="reception_center">Centro di Accoglienza</string>
+    <string name="pharmacy">Farmacia</string>
+    <string name="google_maps">Google Maps</string>
 
 
 </resources>

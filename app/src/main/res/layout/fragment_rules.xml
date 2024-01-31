@@ -2,18 +2,18 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/sfondo_login"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/sfondo_login">
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="370dp"
-        android:layout_height="914dp"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/roundlayoutrl"
         android:rotation="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -21,8 +21,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="25dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
             tools:context=".FragmentRules">
 
             <ScrollView
@@ -39,139 +39,139 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
+                        android:text="@string/current_regulations_and_guidelines_for_good_coexistence"
+                        android:textColor="@color/black"
                         android:textSize="20sp"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:text="@string/current_regulations_and_guidelines_for_good_coexistence"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
+                        android:text="@string/in_this_building_which_houses_asylum_seekers_it_is_essential_to_follow_rules_of_coexistence_that_promote_respect_and_harmony_among_all_residents_mutual_respect_tolerance_and_understanding_are_the_pillars_of_our_community_please_observe_the_following_norms"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:text="@string/in_this_building_which_houses_asylum_seekers_it_is_essential_to_follow_rules_of_coexistence_that_promote_respect_and_harmony_among_all_residents_mutual_respect_tolerance_and_understanding_are_the_pillars_of_our_community_please_observe_the_following_norms" />
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
+                        android:text="@string/_1_respect_for_common_spaces_keep_common_areas_clean_and_tidy_each_resident_is_responsible_for_cleaning_up_after_using_shared_areas_such_as_the_kitchen_living_room_and_recreational_areas"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:text="@string/_1_respect_for_common_spaces_keep_common_areas_clean_and_tidy_each_resident_is_responsible_for_cleaning_up_after_using_shared_areas_such_as_the_kitchen_living_room_and_recreational_areas"/>
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
+                        android:text="@string/_2_silence_during_night_hours_respect_silence_from_10_00_pm_to_7_00_am_to_ensure_everyone_s_rest"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:text="@string/_2_silence_during_night_hours_respect_silence_from_10_00_pm_to_7_00_am_to_ensure_everyone_s_rest"/>
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
+                        android:text="@string/_3_tolerance_and_cultural_respect_celebrate_cultural_diversity_and_show_respect_for_each_individual_s_traditions_and_practices_avoid_behaviors_or_comments_that_may_be_perceived_as_offensive_or_discriminatory"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:text="@string/_3_tolerance_and_cultural_respect_celebrate_cultural_diversity_and_show_respect_for_each_individual_s_traditions_and_practices_avoid_behaviors_or_comments_that_may_be_perceived_as_offensive_or_discriminatory"/>
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
+                        android:text="@string/_4_cooperation_and_assistance_collaborate_in_communal_activities_and_offer_help_to_neighbors_when_needed_thereby_strengthening_the_community_spirit"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:text="@string/_4_cooperation_and_assistance_collaborate_in_communal_activities_and_offer_help_to_neighbors_when_needed_thereby_strengthening_the_community_spirit"/>
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
+                        android:text="@string/_5_open_communication_in_case_of_disagreements_or_problems_open_and_constructive_communication_is_encouraged_contact_the_facility_managers_for_any_need_or_concern"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:text="@string/_5_open_communication_in_case_of_disagreements_or_problems_open_and_constructive_communication_is_encouraged_contact_the_facility_managers_for_any_need_or_concern"/>
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
+                        android:text="@string/illustration_of_lifestyle_for_staying_healthy"
+                        android:textColor="@color/black"
                         android:textSize="20sp"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:text="@string/illustration_of_lifestyle_for_staying_healthy"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:textSize="16sp"
+                        android:text="@string/to_promote_and_maintain_a_healthy_lifestyle_within_our_community_we_recommend_following_these_simple_but_effective_daily_habits"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:text="@string/to_promote_and_maintain_a_healthy_lifestyle_within_our_community_we_recommend_following_these_simple_but_effective_daily_habits"/>
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:textSize="16sp"
+                        android:text="@string/_1_balanced_diet_consume_a_variety_of_nutritious_foods_preferring_fruits_vegetables_whole_grains_lean_proteins_and_limiting_the_intake_of_sugars_saturated_fats_and_salt"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:text="@string/_1_balanced_diet_consume_a_variety_of_nutritious_foods_preferring_fruits_vegetables_whole_grains_lean_proteins_and_limiting_the_intake_of_sugars_saturated_fats_and_salt"/>
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:textSize="16sp"
+                        android:text="@string/regular_physical_activity_incorporate_physical_activity_into_your_daily_routine_such_as_walking_light_exercises_or_group_sports_for_at_least_30_minutes_a_day"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:text="@string/regular_physical_activity_incorporate_physical_activity_into_your_daily_routine_such_as_walking_light_exercises_or_group_sports_for_at_least_30_minutes_a_day"/>
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:textSize="16sp"
+                        android:text="@string/_3_personal_and_sleep_hygiene_maintain_good_personal_hygiene_and_ensure_adequate_rest_each_night"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:text="@string/_3_personal_and_sleep_hygiene_maintain_good_personal_hygiene_and_ensure_adequate_rest_each_night"/>
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:textSize="16sp"
+                        android:text="@string/_4_avoiding_harmful_habits_reduce_or_eliminate_the_consumption_of_tobacco_alcohol_and_other_harmful_substances"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:text="@string/_4_avoiding_harmful_habits_reduce_or_eliminate_the_consumption_of_tobacco_alcohol_and_other_harmful_substances"/>
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:textSize="16sp"
+                        android:text="@string/_5_mental_health_dedicate_time_to_relaxing_activities_and_socializing_and_do_not_hesitate_to_seek_support_when_needed"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:text="@string/_5_mental_health_dedicate_time_to_relaxing_activities_and_socializing_and_do_not_hesitate_to_seek_support_when_needed"/>
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:textSize="16sp"
+                        android:text="@string/_6_access_to_medical_care_if_needed_consult_the_available_medical_staff_for_health_advice_medications_and_nutrition"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:text="@string/_6_access_to_medical_care_if_needed_consult_the_available_medical_staff_for_health_advice_medications_and_nutrition"/>
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:textSize="16sp"
+                        android:text="@string/following_these_tips_will_contribute_to_creating_a_healthy_and_positive_environment_for_all_community_members"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:text="@string/following_these_tips_will_contribute_to_creating_a_healthy_and_positive_environment_for_all_community_members"/>
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 

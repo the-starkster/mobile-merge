@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/bottomSheetCloseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_close" />
+
+        <TextView
+            android:id="@+id/PlaceName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bottomSheetCloseButton"
+            android:layout_marginBottom="5dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:drawableStartCompat="@drawable/ic_place_info"
+            android:drawablePadding="15dp" />
+
+        <LinearLayout
+            android:id="@+id/PlaceRatingBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/PlaceName"
+            android:layout_marginStart="39dp"
+            android:orientation="horizontal">
+
+            <RatingBar
+                android:id="@+id/PlaceRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                style="?android:attr/ratingBarStyleSmall"
+                android:isIndicator="true"
+                app:drawableStartCompat="@drawable/ic_place_address"
+                android:drawablePadding="15dp"
+                android:stepSize="0.1"
+                android:progressTint="#FFCC01"
+                android:secondaryProgressTint="#00FFFFFF" />
+
+            <TextView
+                android:id="@+id/PlaceRatingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="center_vertical" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/PlaceAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/PlaceRatingBarLayout"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:drawableStartCompat="@drawable/ic_place_address"
+            android:drawablePadding="15dp" />
+
+        <TextView
+            android:id="@+id/PlaceOpenNow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/PlaceAddress"
+            android:layout_marginBottom="5dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:drawableStartCompat="@drawable/ic_place_is_open"
+            android:drawablePadding="15dp" />
+
+        <TextView
+            android:id="@+id/PlaceCurrentOpeningHours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/PlaceOpenNow"
+            android:layout_marginBottom="15dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:drawableStartCompat="@drawable/ic_place_current_opening_hours"
+            android:drawablePadding="15dp" />
+
+        <Button
+            android:id="@+id/google_maps_intent_button"
+            style="@style/Widget.Material3.Button.TonalButton.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/PlaceCurrentOpeningHours"
+            android:text="@string/google_maps" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -12,13 +12,15 @@ import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.example.asilapp10.QRCode.QRCodeFragment;
+import com.example.asilapp10.maps.MapsFragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth auth;
-    Button buttonFragmentUser, buttonFragmentQR, buttonFragmentHealth, buttonChartPie, buttonHome,
+    Button buttonFragmentUser, buttonFragmentMaps, buttonFragmentQR, buttonFragmentHealth, buttonChartPie, buttonHome,
            buttonVideo;
     TextView textRating, textSend, textThankYou;
     RatingBar ratingBar;
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         buttonChartPie = findViewById(R.id.btn_pie);
         buttonHome = findViewById(R.id.btn_home);
         buttonVideo = findViewById(R.id.btn_video);
+        buttonFragmentMaps = findViewById((R.id.btn_map));
 
         textRating = findViewById(R.id.btn_review);
         textSend = findViewById(R.id.t_send);
@@ -85,10 +88,30 @@ public class MainActivity extends AppCompatActivity {
 
             // Crea e sostituisci il frammento dell'utente
 
-            FragmentQRCode codeQRFragment = new FragmentQRCode();
-            fragmentTransaction.replace(R.id.fragment_container, codeQRFragment);
+            QRCodeFragment qrcodeFragment = new QRCodeFragment();
+            fragmentTransaction.replace(R.id.fragment_container, qrcodeFragment);
             fragmentTransaction.commit();
         });
+
+
+        // Configura il click listener per il pulsante della mappa
+        buttonFragmentMaps.setOnClickListener(v -> {
+
+            // Ottieni il gestore dei frammenti
+
+
+            // Crea e sostituisci il frammento dell'utente
+
+            MapsFragment mapsFragment = new MapsFragment();
+
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, mapsFragment)
+                    .setReorderingAllowed(true)
+                    .addToBackStack(null)
+                    .commit();
+        });
+
 
          // Configura il click listener per il pulsante del profilo salute
         buttonFragmentHealth.setOnClickListener(v -> {

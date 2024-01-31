@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Style for the round FAB -->
+    <style name="RoundFAB" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- Style for the PlaceMarkerBottomSheetDialog -->
+    <style name="PlaceMarkerBottomSheetDialogStyle" parent="ThemeOverlay.Material3.DayNight.BottomSheetDialog">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+</resources>
