@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentOtherView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <!-- Pulsante Profilo -->
+
+        <Button
+            android:id="@+id/btn_profile"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#008000"
+            android:drawableTop="@drawable/baseline_profile_24"
+            android:paddingVertical="25dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/profile"
+            android:textColor="#FFFFFF" />
+
+        <!-- Pulsante Mappa -->
+
+        <Button
+            android:id="@+id/btn_map"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#008000"
+            android:drawableTop="@drawable/baseline_map_24"
+            android:paddingVertical="25dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/map"
+            android:textColor="#FFFFFF" />
+
+        <!-- Pulsante Profilo Salute -->
+
+        <Button
+            android:id="@+id/btn_health"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="145dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#008000"
+            android:drawableTop="@drawable/baseline_health_24"
+            android:paddingVertical="25dp"
+            android:paddingStart="-25dp"
+            android:paddingEnd="15dp"
+            android:text="@string/health_profile"
+            android:textColor="#FFFFFF" />
+
+        <!-- Pulsante Video -->
+
+        <Button
+            android:id="@+id/btn_video"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#008000"
+            android:paddingVertical="25dp"
+            android:paddingStart="-25dp"
+            android:paddingEnd="15dp"
+            android:text="@string/video"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -155,37 +155,6 @@
                     android:text="@string/qr_code"
                     android:textColor="#FFFFFF" />
 
-                <!-- Pulsante Profilo -->
-
-                <Button
-                    android:id="@+id/btn_profile"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="85dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:backgroundTint="#008000"
-                    android:drawableTop="@drawable/baseline_profile_24"
-                    android:paddingVertical="25dp"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="15dp"
-                    android:text="@string/profile"
-                    android:textColor="#FFFFFF" />
-
-                <!-- Pulsante Mappa -->
-
-                <Button
-                    android:id="@+id/btn_map"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="85dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:backgroundTint="#008000"
-                    android:drawableTop="@drawable/baseline_map_24"
-                    android:paddingVertical="25dp"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="15dp"
-                    android:text="@string/map"
-                    android:textColor="#FFFFFF" />
 
                 <!-- Pulsante Grafico a Torta -->
 
@@ -203,33 +172,20 @@
                     android:text="@string/charges"
                     android:textColor="#FFFFFF" />
 
-                <!-- Pulsante Profilo Salute -->
+                <!-- Pulsante per le altre funzionalità -->
 
                 <Button
-                    android:id="@+id/btn_health"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="145dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:backgroundTint="#008000"
-                    android:drawableTop="@drawable/baseline_health_24"
-                    android:paddingVertical="25dp"
-                    android:paddingStart="-25dp"
-                    android:paddingEnd="15dp"
-                    android:text="@string/health_profile"
-                    android:textColor="#FFFFFF" />
-
-                <Button
-                    android:id="@+id/btn_video"
+                    android:id="@+id/btn_other_main"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="85dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:backgroundTint="#008000"
+                    android:drawableTop="@drawable/baseline_pie_chart_24"
                     android:paddingVertical="25dp"
-                    android:paddingStart="-25dp"
+                    android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/video"
+                    android:text="@string/other_main"
                     android:textColor="#FFFFFF" />
 
             </LinearLayout>

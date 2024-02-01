@@ -20,8 +20,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth auth;
-    Button buttonFragmentUser, buttonFragmentMaps, buttonFragmentQR, buttonFragmentHealth, buttonChartPie, buttonHome,
-           buttonVideo;
+    Button buttonFragmentQR, buttonChartPie, buttonHome,buttonOther;
     TextView textRating, textSend, textThankYou;
     RatingBar ratingBar;
     FirebaseUser user;
@@ -37,13 +36,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Trova i pulsanti nel layout
 
-        buttonFragmentUser = findViewById(R.id.btn_profile);
         buttonFragmentQR = findViewById(R.id.btn_qr);
-        buttonFragmentHealth = findViewById(R.id.btn_health);
         buttonChartPie = findViewById(R.id.btn_pie);
         buttonHome = findViewById(R.id.btn_home);
-        buttonVideo = findViewById(R.id.btn_video);
-        buttonFragmentMaps = findViewById((R.id.btn_map));
+        buttonOther = findViewById(R.id.btn_other_main);
 
         textRating = findViewById(R.id.btn_review);
         textSend = findViewById(R.id.t_send);
@@ -63,20 +59,7 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
 
-        // Configura il click listener per il pulsante del profilo utente
-        buttonFragmentUser.setOnClickListener(v -> {
 
-            // Ottieni il gestore dei frammenti
-
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-            // Crea e sostituisci il frammento dell'utente
-
-            FragmentUserData userFragment = new FragmentUserData();
-            fragmentTransaction.replace(R.id.fragment_container, userFragment);
-            fragmentTransaction.commit();
-        });
 
         // Configura il click listener per il pulsante del codice QR
         buttonFragmentQR.setOnClickListener(v -> {
@@ -94,39 +77,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        // Configura il click listener per il pulsante della mappa
-        buttonFragmentMaps.setOnClickListener(v -> {
 
-            // Ottieni il gestore dei frammenti
-
-
-            // Crea e sostituisci il frammento dell'utente
-
-            MapsFragment mapsFragment = new MapsFragment();
-
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragment_container, mapsFragment)
-                    .setReorderingAllowed(true)
-                    .addToBackStack(null)
-                    .commit();
-        });
-
-
-         // Configura il click listener per il pulsante del profilo salute
-        buttonFragmentHealth.setOnClickListener(v -> {
-
-            // Ottieni il gestore dei frammenti
-
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-            // Crea e sostituisci il frammento dell'utente
-
-            FragmentHealthProfile healthProfileFragment = new FragmentHealthProfile();
-            fragmentTransaction.replace(R.id.fragment_container, healthProfileFragment);
-            fragmentTransaction.commit();
-        });
 
         //Configura il click listener per il pulsante del grafico a torta
         buttonChartPie.setOnClickListener(v -> {
@@ -152,18 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Configura il click listener per far visualizzare il video all'utente
 
-        buttonVideo.setOnClickListener(v ->{
-            // Ottieni il gestore dei frammenti
 
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-            // Crea e sostituisci il frammento dell'utente
-
-            FragmentVideo video = new FragmentVideo();
-            fragmentTransaction.replace(R.id.fragment_container, video);
-            fragmentTransaction.commit();
-        });
 
         //Configura il click listener per far apparire la valutazione
         textRating.setOnClickListener(v ->{
@@ -177,6 +117,17 @@ public class MainActivity extends AppCompatActivity {
                 // Questo codice viene eseguito ogni volta che l'utente cambia la valutazione
                 // Aggiungi qui la tua logica, ad esempio per salvare la valutazione
             }
+        });
+
+        buttonOther.setOnClickListener(v ->{
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+            // Crea e sostituisci il frammento dell'utente
+
+            FragmentOtherView other = new FragmentOtherView();
+            fragmentTransaction.replace(R.id.fragment_container, other);
+            fragmentTransaction.commit();
         });
 
         textSend.setOnClickListener(v -> {

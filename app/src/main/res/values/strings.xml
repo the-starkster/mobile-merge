@@ -192,5 +192,6 @@
     <string name="reception_center">Reception Center</string>
     <string name="pharmacy">Pharmacy</string>
     <string name="google_maps">Google Maps</string>
+    <string name="other_main">Other</string>
 
 </resources>
