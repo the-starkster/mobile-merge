@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/home_selector"
+        android:title="Home" />
+    <item
+        android:id="@+id/navigation_maps"
+        android:icon="@drawable/maps_selector"
+        android:title="Mappe" />
+    <item
+        android:id="@+id/navigation_pie_chart"
+        android:icon="@drawable/pie_chart_selector"
+        android:title="Spese" />
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/profile_selector"
+        android:title="Profilo" />
+    <item
+        android:id="@+id/navigation_health_profile"
+        android:icon="@drawable/health_profile_selector"
+        android:title="Profilo Sanitario" />
+</menu>

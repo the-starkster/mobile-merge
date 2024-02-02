@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Layout principale della schermata del grafico a torta -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/sfondo_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChartPie">
+
+    <!-- Titolo della schermata del grafico a torta -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="195dp"
+        android:text="@string/from"
+        android:textColor="#3A833C"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="100dp"
+        android:text="@string/to"
+        android:textColor="#3A833C"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total_charges_1"
+        android:textColor="#3A833C"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <!-- Visualizzazione del grafico a torta -->
+
+    <com.anychart.AnyChartView
+        android:id="@+id/any_chart_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="260dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="1.0">
+
+        <!-- Pulsante per modificare il grafico a torta -->
+
+    </com.anychart.AnyChartView>
+
+    <!-- DatePicker per selezionare la data di inizio -->
+
+    <Button
+        android:id="@+id/b_edit_chart_pie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="#3A833C"
+        android:text="@string/add_chart_pie"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <DatePicker
+        android:id="@+id/d_pie_start"
+        android:layout_width="236dp"
+        android:layout_height="88dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="170dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:calendarTextColor="#FFFFFF"
+        android:background="@drawable/roundlayoutdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Pulsante per applicare la selezione del test -->
+
+    <!-- DatePicker per selezionare la data di fine -->
+
+    <Button
+        android:id="@+id/btn_apply_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#3A833C"
+        android:text="@string/apply"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <DatePicker
+        android:id="@+id/d_pie_end"
+        android:layout_width="236dp"
+        android:layout_height="94dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="75dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:calendarTextColor="#FFFFFF"
+        android:background="@drawable/roundlayoutdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
