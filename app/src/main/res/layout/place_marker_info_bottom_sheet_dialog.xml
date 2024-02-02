@@ -24,6 +24,7 @@
             android:layout_below="@id/bottomSheetCloseButton"
             android:layout_marginBottom="5dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/white"
             app:drawableStartCompat="@drawable/ic_place_info"
             android:drawablePadding="15dp" />
 

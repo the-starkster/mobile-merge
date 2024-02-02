@@ -10,6 +10,7 @@
     android:background="@drawable/sfondo_login">
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="280dp"
@@ -35,10 +36,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textStyle="bold"
             android:text="@string/click_here_to_leave_a_review"
             android:textColor="#156017"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
 
         <TextView
@@ -46,10 +47,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/thank_you"
-            android:textStyle="bold"
-            android:textSize="18sp"
             android:textColor="#156017"
-            android:visibility="gone"/>
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
 
         <RatingBar
             android:id="@+id/ratingBar"
@@ -57,21 +58,21 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
             android:layout_marginTop="4dp"
-            android:stepSize="1.0"
             android:progressTint="#3A833C"
+            android:stepSize="1.0"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:visibility="gone"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/t_send"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/send"
-            android:textStyle="bold"
-            android:textSize="18sp"
             android:textColor="#156017"
-            android:visibility="gone"/>
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
 
 
     </LinearLayout>
@@ -84,114 +85,24 @@
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+        app:layout_constraintBottom_toTopOf="@+id/BottomNavigationMenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="VisualLintBounds">
-
     </FrameLayout>
 
     <!-- HorizontalScrollView per permettere lo scorrimento orizzontale dei pulsanti -->
 
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView"
-        android:layout_width="wrap_content"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/BottomNavigationMenu"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints,VisualLintBounds">
+        app:menu="@menu/bottom_navigation_menu">
 
-        <!-- ConstraintLayout interno al HorizontalScrollView -->
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            tools:ignore="MissingConstraints,VisualLintBounds">
-
-            <!-- LinearLayout per disporre i pulsanti in orizzontale -->
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="128dp"
-                android:background="#008000"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints,VisualLintBounds">
-
-                <!-- Serie di pulsanti con icone e testo -->
-
-                <!-- Pulsante Home -->
-
-                <Button
-                    android:id="@+id/btn_home"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="85dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:backgroundTint="#008000"
-                    android:drawableTop="@drawable/baseline_home_24"
-                    android:drawablePadding="5dp"
-                    android:paddingVertical="25dp"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="15dp"
-                    android:text="@string/home"
-                    android:textColor="#FFFFFF" />
-
-                <!-- Pulsante QR Code -->
-
-                <Button
-                    android:id="@+id/btn_qr"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="85dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:backgroundTint="#008000"
-                    android:drawableTop="@drawable/baseline_qr_code_24"
-                    android:paddingVertical="25dp"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="15dp"
-                    android:text="@string/qr_code"
-                    android:textColor="#FFFFFF" />
-
-
-                <!-- Pulsante Grafico a Torta -->
-
-                <Button
-                    android:id="@+id/btn_pie"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="85dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:backgroundTint="#008000"
-                    android:drawableTop="@drawable/baseline_pie_chart_24"
-                    android:paddingVertical="25dp"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="15dp"
-                    android:text="@string/charges"
-                    android:textColor="#FFFFFF" />
-
-                <!-- Pulsante per le altre funzionalità -->
-
-                <Button
-                    android:id="@+id/btn_other_main"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="85dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:backgroundTint="#008000"
-                    android:drawableTop="@drawable/baseline_pie_chart_24"
-                    android:paddingVertical="25dp"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="15dp"
-                    android:text="@string/other_main"
-                    android:textColor="#FFFFFF" />
-
-            </LinearLayout>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </HorizontalScrollView>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

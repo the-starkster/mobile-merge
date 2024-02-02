@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.asilapp10.QRCode.QRCodeBottomSheetDialogFragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
@@ -30,11 +31,13 @@ import java.util.Map;
 public class FragmentUserData extends Fragment {
 
     // Dichiarazione delle variabili per componenti dell'interfaccia utente
-    TextView tfName, tlName, tCF, tbPlace, tdBirth, tNationality, tpResidence, tAddress, tpNumber,
-             tEmail;
+    TextView tfName, tlName, tCF, tbPlace, tdBirth, tNationality, tpResidence, tAddress, tpNumber, tEmail;
     Button buttonEdit, buttonApplyEdit, buttonLogout, buttonBack, buttonShare;
     FirebaseUser user;
     FirebaseAuth mAuth;
+
+    String taxIDcode = "";
+    String displayName = "";
 
     // Chiavi costanti per i campi nel database
     private final FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -48,9 +51,6 @@ public class FragmentUserData extends Fragment {
     public static final String KEY_PHONE_NUMBER = "Phone number";
     public static final String KEY_DATE_BIRTH = "Date of birth";
 
-    public FragmentUserData() {
-        // Required empty public constructor
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -58,8 +58,7 @@ public class FragmentUserData extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_user_data, container, false);
     }
@@ -92,6 +91,14 @@ public class FragmentUserData extends Fragment {
 
         String userId = (user != null) ? user.getUid() : "";
         queryFireStore(userId);
+
+        //QRCode BottomSheet setup
+        Button qrcodeButton = view.findViewById(R.id.QRCodeButton);
+        qrcodeButton.setOnClickListener(v -> {
+            QRCodeBottomSheetDialogFragment QRCodeButton = new QRCodeBottomSheetDialogFragment(displayName, taxIDcode);
+            QRCodeButton.show(getChildFragmentManager(), QRCodeButton.getTag());
+
+        });
 
         // Imposta il listener per il pulsante 'Edit'
         buttonEdit.setOnClickListener(v -> {
@@ -247,6 +254,10 @@ public class FragmentUserData extends Fragment {
                     tAddress.setText(documentSnapshot.getString("Address"));
                     tpNumber.setText(documentSnapshot.getString("Phone number"));
                     tEmail.setText(user.getEmail());
+
+                    //Set displayName and taxIDcode for QRCode BottomSheet
+                    displayName = documentSnapshot.getString(KEY_FIRST_NAME) + " " + documentSnapshot.getString(KEY_LAST_NAME);
+                    taxIDcode = documentSnapshot.getString(KEY_TAX_ID_CODE);
 
                 } else {
                     // Il documento non esiste

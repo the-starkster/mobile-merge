@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="wrap_content"
     android:background="@drawable/sfondo_login">
 
 
@@ -30,9 +30,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:paddingStart="16dp"
+                android:paddingTop="40dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="50dp">
 
                 <!-- Riga per Nome -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/QRCodeButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#3A833C"
+                        android:text="@string/autenticati_con_il_qrcode"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -61,11 +84,13 @@
                 </LinearLayout>
 
                 <!-- Spaziatura -->
+
+                <!-- Riga per Cognome -->
                 <View
+                    android:id="@+id/view"
                     android:layout_width="match_parent"
                     android:layout_height="8dp" />
 
-                <!-- Riga per Cognome -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -367,7 +392,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="108dp"
+                    android:layout_height="wrap_content"
                     android:baselineAligned="false"
                     android:orientation="horizontal">
 
@@ -380,24 +405,31 @@
                         <!-- Bottone per l'edit -->
 
                         <!-- Bottone ritornare indietro dall'edit -->
-                        <Button
-                            android:id="@+id/btn_edit_data"
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="start"
-                            android:layout_marginStart="10dp"
-                            android:backgroundTint="#3A833C"
-                            android:text="@string/edit_user_data"
-                            android:textColor="#FFFFFF" />
-
-                        <Button
-                            android:id="@+id/btn_back_edit"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="#3A833C"
-                            android:text="@string/back_user_data"
-                            android:textColor="#FFFFFF"
-                            android:visibility="gone" />
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/btn_back_edit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="#3A833C"
+                                android:text="@string/back_user_data"
+                                android:textColor="#FFFFFF"
+                                android:visibility="gone" />
+
+                            <Button
+                                android:id="@+id/btn_edit_data"
+                                android:layout_width="134dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:backgroundTint="#3A833C"
+                                android:text="@string/edit"
+                                android:textColor="#FFFFFF" />
+
+                        </LinearLayout>
+
                     </FrameLayout>
 
                     <!-- Secondo FrameLayout per gli altri due bottoni -->
@@ -407,14 +439,6 @@
                         android:layout_weight="1">
 
                         <!-- Bottone per il logout -->
-                        <Button
-                            android:id="@+id/btn_logout"
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:backgroundTint="#3A833C"
-                            android:text="@string/logout_user_data"
-                            android:textColor="#FFFFFF" />
 
                         <!-- Bottone per applicare le modifiche -->
                         <Button
@@ -434,18 +458,35 @@
                         android:layout_weight="1">
 
                         <!-- Bottone per condividere i dati personali -->
-                        <Button
-                            android:id="@+id/btn_share"
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            android:layout_marginEnd="10dp"
-                            android:backgroundTint="#3A833C"
-                            android:text="@string/share"
-                            android:textColor="#FFFFFF" />
 
                     </FrameLayout>
 
+                    <Button
+                        android:id="@+id/btn_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:backgroundTint="#3A833C"
+                        android:text="@string/share"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:backgroundTint="#3A833C"
+                        android:text="@string/logout_user_data"
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
 
             </LinearLayout>

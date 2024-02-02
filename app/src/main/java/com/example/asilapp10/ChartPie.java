@@ -56,11 +56,10 @@ public class ChartPie extends AppCompatActivity {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
         String formattedDate = dateFormat.format(currentDate);
 
-        setContentView(R.layout.activity_chart_pie);
+        setContentView(R.layout.fragment_chart_pie);
 
         anyChartView = findViewById(R.id.any_chart_view); // Inizializza la vista del grafico
         edit = findViewById(R.id.b_edit_chart_pie); // Inizializza il pulsante "Edit"
-        buttonBackHome = findViewById(R.id.btn_back_home);
 
         apply = findViewById(R.id.btn_apply_test); // Inizializza il pulsante "Apply"
 

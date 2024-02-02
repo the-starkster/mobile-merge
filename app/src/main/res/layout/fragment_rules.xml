@@ -23,7 +23,7 @@
             android:layout_marginStart="25dp"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="20dp"
-            tools:context=".FragmentRules">
+            tools:context=".FragmentHome">
 
             <ScrollView
                 android:layout_width="match_parent"

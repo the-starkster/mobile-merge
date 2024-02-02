@@ -193,5 +193,6 @@
     <string name="pharmacy">Pharmacy</string>
     <string name="google_maps">Google Maps</string>
     <string name="other_main">Other</string>
+    <string name="autenticati_con_il_qrcode">Autenticati con il QRCode</string>
 
 </resources>

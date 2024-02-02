@@ -1,7 +1,15 @@
 package com.example.asilapp10;
 
-import androidx.appcompat.app.AppCompatActivity;
+import static androidx.core.content.ContentProviderCompat.requireContext;
 
+
+import androidx.activity.OnBackPressedCallback;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
+
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -56,8 +64,7 @@ public class EditChartPie extends AppCompatActivity {
         // Gestisce il click sul pulsante "Indietro"
 
         buttonBack.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), ChartPie.class);
-            startActivities(new Intent[]{intent});
+            getOnBackPressedDispatcher().onBackPressed();
             finish();
         });
 
@@ -129,9 +136,14 @@ public class EditChartPie extends AppCompatActivity {
 
                             // Torna alla schermata del grafico a torta
 
-                            Intent intent = new Intent(getApplicationContext(), ChartPie.class);
-                            startActivity(intent);
-                            finish();
+                            getOnBackPressedDispatcher().onBackPressed();
+
+                            getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+                                @Override
+                                public void handleOnBackPressed() {
+                                    finish();
+                                }
+                            });
                         }
                     }
                 }).addOnFailureListener(e -> {
