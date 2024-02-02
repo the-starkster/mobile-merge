@@ -391,17 +391,18 @@ public class Register extends AppCompatActivity {
 
         // Ottenere i valori inseriti dall'utente per i dati personali
 
-        String firstName = editTextFirstName.getText() != null ? editTextFirstName.getText().toString() : "Paolo";
-        String lastName = editTextLastName.getText() != null ? editTextLastName.getText().toString() : "Buono";
-        String taxIdCode = editTextTaxIdCode.getText() != null ? editTextTaxIdCode.getText().toString() : "AAAAAA";
-        String birthPlace = editTextBirthPlace.getText() != null ? editTextBirthPlace.getText().toString() : "Bari";
+        String firstName = editTextFirstName.getText().toString().isEmpty() ? "Paolo" : editTextFirstName.getText().toString();
+        String lastName = editTextLastName.getText().toString().isEmpty() ? "Buono" : editTextLastName.getText().toString();
+        String taxIdCode = editTextTaxIdCode.getText().toString().isEmpty() ? "AAAAAA" : editTextTaxIdCode.getText().toString();
+        String birthPlace = editTextBirthPlace.getText().toString().isEmpty() ? "Bari" : editTextBirthPlace.getText().toString();
 
-        String dateOfBirth = day + "/" + month + "/" + year;  // Comporre la data di nascita nel formato "gg/mm/aaaa"
+        String dateOfBirth = day + "/" + month + "/" + year;
 
-        String nationality = editTextNationality.getText() != null ? editTextNationality.getText().toString() : "Italiana";
-        String placeOfResidence = editTextPlaceOfResidence.getText() != null ? editTextPlaceOfResidence.getText().toString() : "Bari";
-        String address = editTextAddress.getText() != null ? editTextAddress.getText().toString() : "";
-        String phoneNumber = editTextPhoneNumber.getText() != null ? editTextPhoneNumber.getText().toString() : "333333333";
+        String nationality = editTextNationality.getText().toString().isEmpty() ? "Italiana" : editTextNationality.getText().toString();
+        String placeOfResidence = editTextPlaceOfResidence.getText().toString().isEmpty() ? "Bari" : editTextPlaceOfResidence.getText().toString();
+        String address = editTextAddress.getText().toString().isEmpty() ? "Via Aldo" : editTextAddress.getText().toString();
+        String phoneNumber = editTextPhoneNumber.getText().toString().isEmpty() ? "333333333" : editTextPhoneNumber.getText().toString();
+
 
         // Creare un dizionario (Map) contenente i dati personali dell'utente
 

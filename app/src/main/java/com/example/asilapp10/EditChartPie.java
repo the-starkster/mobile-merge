@@ -1,16 +1,10 @@
 package com.example.asilapp10;
 
-import static androidx.core.content.ContentProviderCompat.requireContext;
 
 
 import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentTransaction;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -71,12 +65,10 @@ public class EditChartPie extends AppCompatActivity {
         // Ottiene i valori inseriti dall'utente per cibo, medicine e altro
 
         buttonAdd.setOnClickListener(v -> {
-            double[] food = { editTextFood.getText().toString().isEmpty() ? 0.0
-                    : Double.parseDouble(editTextFood.getText().toString()) };
-            double[] medicines = { editTextMedicines.getText().toString().isEmpty() ? 0.0
-                    : Double.parseDouble(editTextMedicines.getText().toString()) };
-            double[] other = { editTextOther.getText().toString().isEmpty() ? 0.0
-                    : Double.parseDouble(editTextOther.getText().toString()) };
+            double[] food = { parseDoubleOrZero(editTextFood.getText().toString()) };
+            double[] medicines = { parseDoubleOrZero(editTextMedicines.getText().toString()) };
+            double[] other = { parseDoubleOrZero(editTextOther.getText().toString()) };
+
 
             String userId = user.getUid();
             DocumentReference docRef = db.collection("Chart Pie Data")
@@ -151,4 +143,27 @@ public class EditChartPie extends AppCompatActivity {
                 });
         });
     }
+    /**
+     * Tenta di convertire una stringa in un valore double. Se la stringa è vuota,
+     * contiene solo un punto o non è convertibile in un numero, restituisce 0.0.
+     * Questo metodo previene il lancio di {@link NumberFormatException} in caso di
+     * stringhe non valide, fornendo un valore di default sicuro per operazioni di parsing.
+     *
+     * @param input La stringa da convertire in un valore double.
+     * @return Il valore double risultante dalla conversione della stringa di input;
+     *         restituisce 0.0 se l'input è vuoto, contiene solo un punto o non è
+     *         convertibile in un valore double valido.
+     */
+    private double parseDoubleOrZero(String input) {
+        if (input == null || input.isEmpty() || input.equals(".")) {
+            return 0.0;
+        }
+        try {
+            return Double.parseDouble(input);
+        } catch (NumberFormatException e) {
+            return 0.0;
+        }
+    }
+
+
 }

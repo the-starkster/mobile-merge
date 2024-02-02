@@ -2,19 +2,14 @@ package com.example.asilapp10;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.Lifecycle;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.asilapp10.maps.MapsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -24,7 +19,6 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnItemSelectedListener {
 
     FirebaseAuth auth;
-    Button buttonFragmentQR, buttonChartPie, buttonHome,buttonOther;
     TextView textRating, textSend, textThankYou;
     RatingBar ratingBar;
     FirebaseUser user;
@@ -80,7 +74,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         //BottomNavigationMenu Setup, set listener, select "home" by default
         BottomNavigationView bottomNavigationView = findViewById(R.id.BottomNavigationMenu);
         bottomNavigationView.setOnItemSelectedListener(this);
-        bottomNavigationView.setSelectedItemId(R.id.navigation_home);
     }
 
     FragmentHome homeFragment = new FragmentHome();
@@ -118,11 +111,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                     .addToBackStack(null)
                     .commit();
 
-
-
-            //Intent intent = new Intent(getApplicationContext(), ChartPie.class);
-            //startActivity(intent);
-            //finish();
             return true;
         }
         else if (id == R.id.navigation_profile) {
